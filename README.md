@@ -8,3 +8,11 @@ In `flows/`, run the python file to run the flow.
 
 ## Web console
 `$ prefect orion start`
+
+## Create deployment
+`$ prefect deployment build flows/api_flow.py:api_flow -n api_flow_test -q test --apply`
+
+## Run the agent
+`$ prefect agent start -q test`
+
+Once agent is running, trigger the flow from the UI
